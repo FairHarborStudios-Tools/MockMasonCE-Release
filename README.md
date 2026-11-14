@@ -18,7 +18,7 @@ Installers are published on this repository's [Releases page](../../releases).
 | macOS, Intel | `MockMason-osx-x64-Setup.pkg` |
 | macOS, Apple Silicon | `MockMason-osx-arm64-Setup.pkg` |
 
-No release has been published here yet. The first one is on its way.
+Builds marked "Pre-release" are development versions for testing. They are not signed yet, so Windows and macOS show a warning before opening them.
 
 ## About this repository
 
