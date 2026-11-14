@@ -14,12 +14,12 @@ Choose your system. Each button downloads the newest installer.
 
 <!-- downloads:start -->
 <p align="center">
-  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/v0.1.0-dev.4/MockMason-win-Setup.exe"><img src="assets/download-windows.svg" alt="Download MockMason for Windows" height="72"></a>
+  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/windows-v0.1.0-dev.5/MockMason-win-Setup.exe"><img src="assets/download-windows.svg" alt="Download MockMason for Windows" height="72"></a>
   <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/v0.1.0-dev.4/MockMason-osx-x64-Setup.pkg"><img src="assets/download-macos-intel.svg" alt="Download MockMason for Mac with Intel" height="72"></a>
   <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/v0.1.0-dev.4/MockMason-osx-arm64-Setup.pkg"><img src="assets/download-macos-apple-silicon.svg" alt="Download MockMason for Mac with Apple Silicon" height="72"></a>
 </p>
 
-Current versions: Windows: 0.1.0-dev.4 (development build) · macOS Intel: 0.1.0-dev.4 (development build) · macOS Apple Silicon: 0.1.0-dev.4 (development build).
+Current versions: Windows: 0.1.0-dev.5 (development build) · macOS Intel: 0.1.0-dev.4 (development build) · macOS Apple Silicon: 0.1.0-dev.4 (development build).
 <!-- downloads:end -->
 
 **Which Mac do I have?** Open the Apple menu and choose About This Mac. "Chip: Apple M1" or newer means Apple Silicon. "Processor: Intel" means Intel.
