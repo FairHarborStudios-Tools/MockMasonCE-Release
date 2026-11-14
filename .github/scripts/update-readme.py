@@ -12,9 +12,9 @@ import subprocess
 REPO = os.environ["GITHUB_REPOSITORY"]
 START, END = "<!-- downloads:start -->", "<!-- downloads:end -->"
 TARGETS = [
-    ("windows-", "MockMason-win-Setup.exe", "assets/download-windows.svg", "Download MockMason for Windows", "Windows"),
-    ("macos-", "MockMason-osx-x64-Setup.pkg", "assets/download-macos-intel.svg", "Download MockMason for Mac with Intel", "macOS Intel"),
-    ("macos-", "MockMason-osx-arm64-Setup.pkg", "assets/download-macos-apple-silicon.svg", "Download MockMason for Mac with Apple Silicon", "macOS Apple Silicon"),
+    ("windows-", "win-Setup.exe", "assets/download-windows.svg", "Download MockMason for Windows", "Windows"),
+    ("macos-", "osx-x64-Setup.pkg", "assets/download-macos-intel.svg", "Download MockMason for Mac with Intel", "macOS Intel"),
+    ("macos-", "osx-arm64-Setup.pkg", "assets/download-macos-apple-silicon.svg", "Download MockMason for Mac with Apple Silicon", "macOS Apple Silicon"),
 ]
 
 
@@ -23,9 +23,17 @@ def releases():
     return [r for r in json.loads(raw) if not r.get("draft")]
 
 
-def newest(all_releases, prefix, asset):
+def installer(release, ending):
+    """The installer file in a release. Its name carries the version, so match on the ending."""
+    for asset in release.get("assets", []):
+        if asset["name"].startswith("MockMason-") and asset["name"].endswith(ending):
+            return asset["name"]
+    return None
+
+
+def newest(all_releases, prefix, ending):
     def has_asset(release):
-        return any(a["name"] == asset for a in release.get("assets", []))
+        return installer(release, ending) is not None
 
     mine = [r for r in all_releases if r["tag_name"].startswith(prefix) and has_asset(r)]
     if not mine:  # Older releases carried every system under one tag.
@@ -38,13 +46,14 @@ def newest(all_releases, prefix, asset):
 def main():
     all_releases = releases()
     buttons, versions = [], []
-    for prefix, asset, image, alt, label in TARGETS:
-        release = newest(all_releases, prefix, asset)
+    for prefix, ending, image, alt, label in TARGETS:
+        release = newest(all_releases, prefix, ending)
         if release is None:
             url = f"https://github.com/{REPO}/releases"
             versions.append(f"{label}: not published yet")
         else:
             tag = release["tag_name"]
+            asset = installer(release, ending)
             url = f"https://github.com/{REPO}/releases/download/{tag}/{asset}"
             version = re.sub(r"^(windows-|macos-)?v", "", tag)
             kind = " (development build)" if release.get("prerelease") else ""

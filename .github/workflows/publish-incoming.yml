@@ -51,6 +51,7 @@ jobs:
         run: |
           git fetch --depth 1 origin main
           git checkout -f -B main origin/main
+          sleep 5
           python3 .github/scripts/update-readme.py
           if ! git diff --quiet; then
             git config user.name "GregoryLeJeune"
