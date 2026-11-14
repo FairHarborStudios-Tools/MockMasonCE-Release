@@ -2,6 +2,7 @@ name: publish-incoming
 
 # Turns a pushed "incoming/<tag>" branch into a release, then removes the branch.
 # The branch holds the installer files in files/ and the release notes in notes.md.
+# Afterwards only the newest ten development builds are kept. Finished releases are never pruned.
 
 on:
   push:
@@ -27,3 +28,12 @@ jobs:
           gh release create "$TAG" --target main --title "MockMason ${TAG#v}" \
             --notes-file notes.md "${FLAGS[@]}" files/*
           git push origin --delete "$BRANCH"
+      - name: Keep the newest ten development builds
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release list --repo "$GITHUB_REPOSITORY" --limit 200 --json tagName,isPrerelease,createdAt \
+            --jq '[.[] | select(.isPrerelease)] | sort_by(.createdAt) | reverse | .[10:] | .[].tagName' |
+          while read -r tag; do
+            gh release delete "$tag" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag
+          done

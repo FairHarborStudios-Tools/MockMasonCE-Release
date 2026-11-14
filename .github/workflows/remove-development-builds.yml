@@ -1,0 +1,31 @@
+name: Remove development builds
+
+# Deletes every development (pre-release) build and its tag from this repository.
+# Finished releases are left alone. Run it from the Actions tab with "Run workflow".
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type REMOVE to delete all development builds'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  remove:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete all pre-releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CONFIRM: ${{ inputs.confirm }}
+        run: |
+          if [ "$CONFIRM" != "REMOVE" ]; then echo "Not confirmed; nothing was deleted."; exit 1; fi
+          gh release list --repo "$GITHUB_REPOSITORY" --limit 500 --json tagName,isPrerelease \
+            --jq '.[] | select(.isPrerelease) | .tagName' |
+          while read -r tag; do
+            echo "Deleting $tag"
+            gh release delete "$tag" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag
+          done
