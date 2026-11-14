@@ -22,6 +22,8 @@ Choose your system. Each button downloads the newest installer.
 Current versions: Windows: 0.1.0-dev.6 (development build) · macOS Intel: 0.1.0-dev.6 (development build) · macOS Apple Silicon: 0.1.0-dev.6 (development build).
 <!-- downloads:end -->
 
+**Already have MockMason?** You don't need to download it again. Open MockMason and choose **Update now** when it tells you a new version is ready.
+
 **Which Mac do I have?** Open the Apple menu and choose About This Mac. "Chip: Apple M1" or newer means Apple Silicon. "Processor: Intel" means Intel.
 
 Builds marked as development builds are for testing. They are not signed yet, so Windows and macOS show a warning before opening them.
