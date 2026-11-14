@@ -10,19 +10,27 @@ A product of Fair Harbor Studios.
 
 ## Download
 
-Installers are published on this repository's [Releases page](../../releases).
+Choose your system. Each button downloads the newest installer.
 
-| System | File to download |
-| --- | --- |
-| Windows (64-bit) | `MockMason-win-Setup.exe` |
-| macOS, Intel | `MockMason-osx-x64-Setup.pkg` |
-| macOS, Apple Silicon | `MockMason-osx-arm64-Setup.pkg` |
+<!-- downloads:start -->
+<p align="center">
+  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/v0.1.0-dev.4/MockMason-win-Setup.exe"><img src="assets/download-windows.svg" alt="Download MockMason for Windows" height="72"></a>
+  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/v0.1.0-dev.4/MockMason-osx-x64-Setup.pkg"><img src="assets/download-macos-intel.svg" alt="Download MockMason for Mac with Intel" height="72"></a>
+  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/v0.1.0-dev.4/MockMason-osx-arm64-Setup.pkg"><img src="assets/download-macos-apple-silicon.svg" alt="Download MockMason for Mac with Apple Silicon" height="72"></a>
+</p>
 
-Builds marked "Pre-release" are development versions for testing. They are not signed yet, so Windows and macOS show a warning before opening them.
+Current versions: Windows: 0.1.0-dev.4 (development build) · macOS Intel: 0.1.0-dev.4 (development build) · macOS Apple Silicon: 0.1.0-dev.4 (development build).
+<!-- downloads:end -->
+
+**Which Mac do I have?** Open the Apple menu and choose About This Mac. "Chip: Apple M1" or newer means Apple Silicon. "Processor: Intel" means Intel.
+
+Builds marked as development builds are for testing. They are not signed yet, so Windows and macOS show a warning before opening them.
+
+Older versions are on the [Releases page](../../releases). Windows and macOS are released separately, so their tags start with `windows-` or `macos-`.
 
 ## About this repository
 
-This repository holds MockMason's installers and update files only. The source code is not published here.
+This repository holds MockMason's installers and update files only. MockMason's source code is not published here. GitHub adds "Source code" files to every release automatically; they contain only this page and its license, not the application.
 
 ## License
 
