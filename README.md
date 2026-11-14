@@ -6,7 +6,7 @@
 
 MockMason is a desktop mockup tool where you and your AI agent design application screens together. Your agent drafts each screen as movable smart objects, and you can also draft by hand on a grid, link buttons to pages, and talk to your agent about a whole page or a single element.
 
-A product of Fair Harbor Studios.
+A product of [Fair Harbor Studios](https://fairharborstudios.com). Visit [fairharborstudios.com](https://fairharborstudios.com) for more information.
 
 ## Download
 
