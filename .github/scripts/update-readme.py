@@ -2,7 +2,8 @@
 """Rewrites the download section of README.md so each button points at the newest installer.
 
 For each system it picks the newest finished release, or the newest development build when
-no finished release exists yet. Run by the publish workflow after every release.
+no finished release exists yet. Run by the after-release workflow whenever the build
+pipeline publishes a release.
 """
 import json
 import os
