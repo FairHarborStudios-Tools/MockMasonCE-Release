@@ -14,12 +14,12 @@ Choose your system. Each button downloads the newest installer.
 
 <!-- downloads:start -->
 <p align="center">
-  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/windows-v0.1.0-dev.33/MockMason-0.1.0-dev.33-win-Setup.exe"><img src="assets/download-windows.svg" alt="Download MockMason for Windows" height="72"></a>
-  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/macos-v0.1.0-dev.33/MockMason-0.1.0-dev.33-osx-x64-Setup.pkg"><img src="assets/download-macos-intel.svg" alt="Download MockMason for Mac with Intel" height="72"></a>
-  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/macos-v0.1.0-dev.33/MockMason-0.1.0-dev.33-osx-arm64-Setup.pkg"><img src="assets/download-macos-apple-silicon.svg" alt="Download MockMason for Mac with Apple Silicon" height="72"></a>
+  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/windows-v0.1.0-dev.34/MockMason-0.1.0-dev.34-win-Setup.exe"><img src="assets/download-windows.svg" alt="Download MockMason for Windows" height="72"></a>
+  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/macos-v0.1.0-dev.34/MockMason-0.1.0-dev.34-osx-x64-Setup.pkg"><img src="assets/download-macos-intel.svg" alt="Download MockMason for Mac with Intel" height="72"></a>
+  <a href="https://github.com/FairHarborStudios-Tools/MockMasonCE-Release/releases/download/macos-v0.1.0-dev.34/MockMason-0.1.0-dev.34-osx-arm64-Setup.pkg"><img src="assets/download-macos-apple-silicon.svg" alt="Download MockMason for Mac with Apple Silicon" height="72"></a>
 </p>
 
-Current versions: Windows: 0.1.0-dev.33 (development build) · macOS Intel: 0.1.0-dev.33 (development build) · macOS Apple Silicon: 0.1.0-dev.33 (development build).
+Current versions: Windows: 0.1.0-dev.34 (development build) · macOS Intel: 0.1.0-dev.34 (development build) · macOS Apple Silicon: 0.1.0-dev.34 (development build).
 <!-- downloads:end -->
 
 **Already have MockMason?** You don't need to download it again. Open MockMason and choose **Update now** when it tells you a new version is ready.
